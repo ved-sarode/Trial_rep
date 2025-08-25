@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Insert Compound</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #FDF1DB;
+      color: #84253E;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #E00543;
+      margin-bottom: 15px;
+    }
+    form {
+      width: 60%;
+      margin: 0 auto;
+      border: 2px solid #A6CB12;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #FFF8E1;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 2px solid #A6CB12;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    textarea { resize: vertical; }
+    button {
+      margin-top: 15px;
+      background-color: #E00543;
+      color: #FDF1DB;
+      border: 2px solid #A6CB12;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    button:hover {
+      background-color: #84253E;
+      border-color: #84253E;
+    }
+  </style>
+</head>
+<body>
+  <h2>Insert New Compound</h2>
+  <form method="post" action="compound_insert.php">
+    <label for="Comp_id">Compound ID</label>
+    <input type="text" id="Comp_id" name="Comp_id" maxlength="5" required>
+
+    <label for="Comp_name">Name</label>
+    <input type="text" id="Comp_name" name="Comp_name" maxlength="25" required>
+
+    <label for="Comp_description">Description</label>
+    <textarea id="Comp_description" name="Comp_description" rows="4" required></textarea>
+
+    <label for="Pubchem_id">PubChem ID</label>
+    <input type="number" id="Pubchem_id" name="Pubchem_id" required>
+
+    <label for="Food_id">Food ID (optional)</label>
+    <input type="text" id="Food_id" name="Food_id" maxlength="5">
+
+    <button type="submit" name="save">Insert Compound</button>
+  </form>
+</body>
+</html>
